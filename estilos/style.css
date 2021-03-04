@@ -1,3 +1,10 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
+body#corpo{
+    font: normal 10pt Arial;
+}
+div#res{
+    margin-top: 20px;
+
+}
