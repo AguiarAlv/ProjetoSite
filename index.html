@@ -1,67 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
     <title>Somando</title>
 </head>
 
-<body id = 'corpo'>
-    <h1 id = 'letra'>Somatória</h1>
-    <input type="number" name="txt1" id="txt1"> +
-    <input type="number" name="txt2" id="txt2">
-    <input type="button" value="somar" onclick="soma()">
 
-    <div id = "res">Resultado</div>
+<body id='corpo'>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Somando</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 id='letra'>Somatória</h1>
+        <input type="number" name="txt1" id="txt1"> +
+        <input type="number" name="txt2" id="txt2">
+        <input type="button" value="somar" onclick="soma()">
 
-    <div id = 'dark' > 
-        <input type="button" value="Modo Escuro" id = 'buttondark' onclick="modoescuro()" ondblclick="modoclaro()">
-        
-      
+        <div id="res">Resultado</div>
 
-    <script>
-        
-        function soma(){
-            var tn1 = document.getElementById("txt1");
-            var tn2 = document.getElementById("txt2");
-            var n1 = Number(tn1.value);
-            var n2 = Number(tn2.value);
-            var res = document.getElementById("res");
-            var s = n1+n2;
-            res.innerHTML = ('A soma dos numeros: ' + s);
-        }
-        function modoescuro(){
+        <div id='dark'>
+            <input type="button" value="Modo Escuro" id='buttondark' onclick="modoescuro()" ondblclick="modoclaro()">
+
+        </div>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script>
+
+            function soma() {
+                var tn1 = document.getElementById("txt1");
+                var tn2 = document.getElementById("txt2");
+                var n1 = Number(tn1.value);
+                var n2 = Number(tn2.value);
+                var res = document.getElementById("res");
+                var s = n1 + n2;
+                res.innerHTML = ('A soma dos numeros: ' + s);
+            }
+            function modoescuro() {
 
 
-            var a = document.getElementById('corpo');
-            var b = document.getElementById('letra');
-            var c = document.getElementById('res');
-            var d = document.getElementById('buttondark');
-            a.style.background = 'rgb(14, 14, 14)';
-            a.style.color = 'white';
-            b.style.background = 'rgb(14, 14, 14)';
-            b.style.color = 'white';
-            c.style.color = 'white';
+                var a = document.getElementById('corpo');
+                var b = document.getElementById('letra');
+                var c = document.getElementById('res');
+                var d = document.getElementById('buttondark');
+                a.style.background = 'rgb(14, 14, 14)';
+                a.style.color = 'white';
+                b.style.background = 'rgb(14, 14, 14)';
+                b.style.color = 'white';
+                c.style.color = 'white';
 
             }
 
 
-            function modoclaro(){
-            var a = document.getElementById('corpo');
-            var b = document.getElementById('letra');
-            var c = document.getElementById('res');
-            var d = document.getElementById('buttondark');
-            a.style.background = 'white';
-            a.style.color = 'black';
-            b.style.background = 'white';
-            b.style.color = 'black';
-            c.style.color = 'black';
-            
-            
+            function modoclaro() {
+                var a = document.getElementById('corpo');
+                var b = document.getElementById('letra');
+                var c = document.getElementById('res');
+                var d = document.getElementById('buttondark');
+                a.style.background = 'white';
+                a.style.color = 'black';
+                b.style.background = 'white';
+                b.style.color = 'black';
+                c.style.color = 'black';
+
+
             }
-        
-    </script>
+
+        </script>
+
+
 </body>
+
 </html>
